@@ -1,3 +1,23 @@
+==============================
+2010-06-10 15:12:38 +0100 0.06
+==============================
+
+  commit 5aa3cf60cf10787f64d72b03b23c3c865c01d78b
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Thu Jun 10 15:12:38 2010 +0100
+  
+    Finally worked out how PkgVersion works >:) 
+
+==============================
+2010-06-10 15:03:57 +0100 0.04
+==============================
+
+  commit 1cbcbf5e597a809083d957129edd4dadf4a52b87
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Thu Jun 10 15:03:57 2010 +0100
+  
+    Added minimal perl version 
+
 ===================================
 End of changes in the last 365 days
 ===================================

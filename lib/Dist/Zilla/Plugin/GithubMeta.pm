@@ -1,7 +1,6 @@
 package Dist::Zilla::Plugin::GithubMeta;
-
 BEGIN {
-    $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.02';
+  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.06';
 }
 
 # ABSTRACT: Automatically include GitHub meta information in META.yml
