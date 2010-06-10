@@ -1,0 +1,42 @@
+{
+   "abstract" : "Automatically include GitHub meta information in META.yml",
+   "author" : [
+      "Chris Williams <chris@bingosnet.co.uk>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.101582, CPAN::Meta::Converter version 2.101600",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-Plugin-GithubMeta",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla" : "4.101582",
+            "Dist::Zilla::Role::MetaProvider" : "4.101582",
+            "IPC::Cmd" : "0.58",
+            "Moose" : "1.07",
+            "MooseX::Types::URI" : "0.02"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "homepage" : "http://github.com/bingos/dist-zilla-plugin-githubmeta/tree",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/bingos/dist-zilla-plugin-githubmeta.git"
+      }
+   },
+   "version" : "0.02"
+}
+

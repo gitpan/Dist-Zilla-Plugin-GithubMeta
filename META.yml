@@ -1,0 +1,24 @@
+---
+abstract: 'Automatically include GitHub meta information in META.yml'
+author:
+  - 'Chris Williams <chris@bingosnet.co.uk>'
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.101582, CPAN::Meta::Converter version 2.101600'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dist-Zilla-Plugin-GithubMeta
+requires:
+  Dist::Zilla: 4.101582
+  Dist::Zilla::Role::MetaProvider: 4.101582
+  IPC::Cmd: 0.58
+  Moose: 1.07
+  MooseX::Types::URI: 0.02
+resources:
+  homepage: http://github.com/bingos/dist-zilla-plugin-githubmeta/tree
+  repository: git://github.com/bingos/dist-zilla-plugin-githubmeta.git
+version: 0.02

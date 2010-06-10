@@ -1,0 +1,51 @@
+NAME
+    Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta
+    information in META.yml
+
+SYNOPSIS
+      # in dist.ini
+
+      [GithubMeta]
+
+      # to override the homepage
+
+      [GithubMeta]
+      homepage = http://some.sort.of.url/project/
+
+DESCRIPTION
+    Dist::Zilla::Plugin::GithubMeta is a Dist::Zilla plugin to include
+    GitHub <http://github.com> meta information in "META.yml".
+
+    It automatically detects if the distribution directory is under "git"
+    version control and whether the "origin" is a GitHub repository and will
+    set the "repository" and "homepage" meta in "META.yml" to the
+    appropriate URLs for GitHub.
+
+  ATTRIBUTES
+    "homepage"
+        You may override the "homepage" setting by specifying this
+        attribute. This should be a valid URL as understood by
+        MooseX::Types::URI.
+
+  METHODS
+    "metadata"
+        Required by Dist::Zilla::Role::MetaProvider
+
+AUTHOR
+    Chris "BinGOs" Williams
+
+    Based on Module::Install::GithubMeta which was based on
+    Module::Install::Repository by Tatsuhiko Miyagawa
+
+LICENSE
+    Copyright © Chris Williams and Tatsuhiko Miyagawa
+
+    This module may be used, modified, and distributed under the same terms
+    as Perl itself. Please see the license that came with your Perl
+    distribution for details.
+
+SEE ALSO
+    Dist::Zilla
+
+    MooseX::Types::URI
+
