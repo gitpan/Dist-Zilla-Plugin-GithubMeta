@@ -35,9 +35,10 @@
       "homepage" : "http://github.com/bingos/dist-zilla-plugin-githubmeta/tree",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/bingos/dist-zilla-plugin-githubmeta.git"
+         "url" : "git://github.com/bingos/dist-zilla-plugin-githubmeta.git",
+         "web" : "http://github.com/bingos/dist-zilla-plugin-githubmeta/tree"
       }
    },
-   "version" : "0.06"
+   "version" : "0.08"
 }
 

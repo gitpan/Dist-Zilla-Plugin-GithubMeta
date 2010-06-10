@@ -22,4 +22,4 @@ requires:
 resources:
   homepage: http://github.com/bingos/dist-zilla-plugin-githubmeta/tree
   repository: git://github.com/bingos/dist-zilla-plugin-githubmeta.git
-version: 0.06
+version: 0.08

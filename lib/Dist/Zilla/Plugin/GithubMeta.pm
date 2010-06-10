@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::GithubMeta;
 BEGIN {
-  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.06';
+  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.08';
 }
 
 # ABSTRACT: Automatically include GitHub meta information in META.yml
@@ -24,19 +24,13 @@ sub metadata {
   return unless can_run('git');
   return unless my ($git_url) = `git remote show -n origin` =~ /URL: (.*)$/m;
   return unless $git_url =~ /github\.com/; # Not a Github repository
-  my $homepage;
-  if ( $self->homepage ) {
-    $homepage = $self->homepage->as_string;
-  }
-  else {
-    $homepage = $git_url;
-    $homepage =~ s![\w\-]+\@([^:]+):!http://$1/!;
-    $homepage =~ s!\.git$!/tree!;
-  }
+  my $web_url = $git_url;
   $git_url =~ s![\w\-]+\@([^:]+):!git://$1/!;
-  return { resources => { repository => { url => $git_url }, homepage => $homepage } };
+  $web_url =~ s![\w\-]+\@([^:]+):!http://$1/!;
+  $web_url =~ s!\.git$!/tree!;
+  my $home_url = $self->homepage ? $self->homepage->as_string : $web_url;
+  return { resources => { repository => { url => $git_url, type => 'git', web => $web_url }, homepage => $home_url } };
 }
-
 
 sub _under_git {
   return 1 if -e '.git';
@@ -125,7 +119,5 @@ This module may be used, modified, and distributed under the same terms as Perl 
 =head1 SEE ALSO
 
 L<Dist::Zilla>
-
-L<MooseX::Types::URI>
 
 =cut

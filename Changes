@@ -1,4 +1,14 @@
 ==============================
+2010-06-10 16:07:53 +0100 0.08
+==============================
+
+  commit 9d5663594cd849a322d1d7cdc03651cb94174107
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Thu Jun 10 16:07:53 2010 +0100
+  
+    Update to set CPAN::Meta::Spec 2 repository information 
+
+==============================
 2010-06-10 15:12:38 +0100 0.06
 ==============================
 

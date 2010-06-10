@@ -47,5 +47,3 @@ LICENSE
 SEE ALSO
     Dist::Zilla
 
-    MooseX::Types::URI
-
