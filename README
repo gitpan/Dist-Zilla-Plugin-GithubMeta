@@ -2,6 +2,9 @@ NAME
     Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta
     information in META.yml
 
+VERSION
+    version 0.10
+
 SYNOPSIS
       # in dist.ini
 
@@ -12,6 +15,10 @@ SYNOPSIS
       [GithubMeta]
       homepage = http://some.sort.of.url/project/
 
+      # to override the github remote repo (defaults to 'origin')
+      [GithubMeta]
+      remote=github
+
 DESCRIPTION
     Dist::Zilla::Plugin::GithubMeta is a Dist::Zilla plugin to include
     GitHub <http://github.com> meta information in "META.yml".
@@ -21,7 +28,14 @@ DESCRIPTION
     set the "repository" and "homepage" meta in "META.yml" to the
     appropriate URLs for GitHub.
 
+    Based on Module::Install::GithubMeta which was based on
+    Module::Install::Repository by Tatsuhiko Miyagawa
+
   ATTRIBUTES
+    "remote"
+        The GitHub remote repo can be overriden with this attribute. If not
+        provided, it defaults to "origin".
+
     "homepage"
         You may override the "homepage" setting by specifying this
         attribute. This should be a valid URL as understood by
@@ -31,19 +45,16 @@ DESCRIPTION
     "metadata"
         Required by Dist::Zilla::Role::MetaProvider
 
-AUTHOR
-    Chris "BinGOs" Williams
-
-    Based on Module::Install::GithubMeta which was based on
-    Module::Install::Repository by Tatsuhiko Miyagawa
-
-LICENSE
-    Copyright © Chris Williams and Tatsuhiko Miyagawa
-
-    This module may be used, modified, and distributed under the same terms
-    as Perl itself. Please see the license that came with your Perl
-    distribution for details.
-
 SEE ALSO
     Dist::Zilla
+
+AUTHOR
+    Chris Williams <chris@bingosnet.co.uk>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Chris Williams and Tatsuhiko
+    Miyagawa.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

@@ -1,4 +1,20 @@
 ==============================
+2010-06-19 19:55:32 +0100 0.10
+==============================
+
+  commit 2763eaba7287e30794e87f5fd44ec689bcab95dc
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Sat Jun 19 19:55:32 2010 +0100
+  
+    Converted dist.ini to use PluginBundle::BINGOS
+
+  commit 2219dda78a844e09f12c539e34e43447fc1f9557
+  Author: Yanick Champoux <yanick@babyl.dyndns.org>
+  Date:   Sun Jun 20 00:12:38 2010 +0800
+  
+    add the possibility to custom the remote branch 
+
+==============================
 2010-06-10 16:07:53 +0100 0.08
 ==============================
 

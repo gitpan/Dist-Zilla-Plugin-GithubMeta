@@ -1,10 +1,12 @@
 package Dist::Zilla::Plugin::GithubMeta;
 BEGIN {
-  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.08';
+  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.10';
 }
 
 # ABSTRACT: Automatically include GitHub meta information in META.yml
 
+use strict;
+use warnings;
 use Moose;
 with 'Dist::Zilla::Role::MetaProvider';
 
@@ -18,11 +20,17 @@ has 'homepage' => (
   coerce => 1,
 );
 
+has remote => (
+    is => 'ro',
+    default => 'origin',
+);
+
 sub metadata {
   my $self = shift;
   return unless _under_git();
   return unless can_run('git');
-  return unless my ($git_url) = `git remote show -n origin` =~ /URL: (.*)$/m;
+  my $origin = $self->remote;
+  return unless my ($git_url) = `git remote show -n $origin` =~ /URL: (.*)$/m;
   return unless $git_url =~ /github\.com/; # Not a Github repository
   my $web_url = $git_url;
   $git_url =~ s![\w\-]+\@([^:]+):!git://$1/!;
@@ -54,13 +62,19 @@ sub _under_git {
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
-qq[1 is the loneliest number]
+qq[1 is the loneliest number];
+
 
 __END__
+=pod
 
 =head1 NAME
 
 Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta information in META.yml
+
+=head1 VERSION
+
+version 0.10
 
 =head1 SYNOPSIS
 
@@ -73,6 +87,10 @@ Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta information 
   [GithubMeta]
   homepage = http://some.sort.of.url/project/
 
+  # to override the github remote repo (defaults to 'origin')
+  [GithubMeta]
+  remote=github
+
 =head1 DESCRIPTION
 
 Dist::Zilla::Plugin::GithubMeta is a L<Dist::Zilla> plugin to include GitHub L<http://github.com> meta
@@ -80,11 +98,19 @@ information in C<META.yml>.
 
 It automatically detects if the distribution directory is under C<git> version control and whether the 
 C<origin> is a GitHub repository and will set the C<repository> and C<homepage> meta in C<META.yml> to the
-appropriate URLs for GitHub.
+appropriate URLs for GitHub. 
+
+Based on L<Module::Install::GithubMeta> which was based on 
+L<Module::Install::Repository> by Tatsuhiko Miyagawa
 
 =head2 ATTRIBUTES
 
 =over
+
+=item C<remote>
+
+The GitHub remote repo can be overriden with this attribute. If not
+provided, it defaults to C<origin>.
 
 =item C<homepage>
 
@@ -103,21 +129,20 @@ Required by L<Dist::Zilla::Role::MetaProvider>
 
 =back
 
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams
-
-Based on L<Module::Install::GithubMeta> which was based on 
-L<Module::Install::Repository> by Tatsuhiko Miyagawa
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams and Tatsuhiko Miyagawa
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
-
 =head1 SEE ALSO
 
 L<Dist::Zilla>
 
+=head1 AUTHOR
+
+Chris Williams <chris@bingosnet.co.uk>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Chris Williams and Tatsuhiko Miyagawa.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+

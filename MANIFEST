@@ -7,6 +7,6 @@ Makefile.PL
 README
 dist.ini
 lib/Dist/Zilla/Plugin/GithubMeta.pm
-t/00_compile.t
+t/00-compile.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
