@@ -2,18 +2,18 @@
 use strict;
 use warnings;
 
- BEGIN { require 5.008005; } 
+BEGIN { require 5.008005; }
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'Automatically include GitHub meta information in META.yml',
-  'AUTHOR' => 'Chris Williams <chris@bingosnet.co.uk>',
+  'AUTHOR' => 'Chris Williams <chris@bingosnet.co.uk>, Ricardo SIGNES <rjbs@cpan.org>',
   'BUILD_REQUIRES' => {},
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'Dist-Zilla-Plugin-GithubMeta',
   'EXE_FILES' => [],
@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     'Moose' => '1.07',
     'MooseX::Types::URI' => '0.02'
   },
-  'VERSION' => '0.10',
+  'VERSION' => '0.12',
   'test' => {
     'TESTS' => 't/*.t'
   }

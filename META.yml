@@ -2,11 +2,12 @@
 abstract: 'Automatically include GitHub meta information in META.yml'
 author:
   - 'Chris Williams <chris@bingosnet.co.uk>'
+  - 'Ricardo SIGNES <rjbs@cpan.org>'
 build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.101612, CPAN::Meta::Converter version 2.101670'
+generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110930'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,6 +21,6 @@ requires:
   MooseX::Types::URI: 0.02
   perl: 5.008005
 resources:
-  homepage: http://github.com/bingos/dist-zilla-plugin-githubmeta/tree
-  repository: git://github.com/bingos/dist-zilla-plugin-githubmeta.git
-version: 0.10
+  homepage: http://github.com/bingos/dist-zilla-plugin-githubmeta
+  repository: http://github.com/bingos/dist-zilla-plugin-githubmeta
+version: 0.12

@@ -1,4 +1,74 @@
 ==============================
+2011-05-03 12:23:18 +0100 0.12
+==============================
+
+  commit 51b3763c0dff834f10a64a9e38e951e51d2dea1d
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue May 3 12:23:18 2011 +0100
+  
+    Add POD::Coverage exemption
+
+  commit 2041e9982d30681b9b3a2f9bd815e118079d3c9c
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue May 3 12:19:09 2011 +0100
+  
+    Bumpity version
+
+  commit b253fb3122e24a310796c4260397d712fdce1c0f
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue May 3 11:47:04 2011 +0100
+  
+    Remove trailing whitespace
+
+  commit b91e4c56debfddc0fcd89a6bece5b34258d8bc79
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue May 3 11:45:26 2011 +0100
+  
+    Updated authors and copyright in dist.ini
+
+  commit 9d98e255a295e95e0fe171c177756060ffbcf6d6
+  Author: Ricardo Signes <rjbs@cpan.org>
+  Date:   Mon May 2 22:57:49 2011 -0400
+  
+    rename to-be-obsoleted [Prereq]
+
+  commit 5fa24d00e674e2344e5d58c6280c63a34cc5a56d
+  Author: Ricardo Signes <rjbs@cpan.org>
+  Date:   Mon May 2 22:31:00 2011 -0400
+  
+    documentation for the changes
+
+  commit 6dfef49bb85848df102485913d888cd2e9c4dff4
+  Author: Ricardo Signes <rjbs@cpan.org>
+  Date:   Mon May 2 18:59:37 2011 -0400
+  
+    add a small but non-trivial set of tests
+
+  commit bb4c0dcbf6734a150b8a0444a739efd08f109faa
+  Author: Ricardo Signes <rjbs@cpan.org>
+  Date:   Mon May 2 18:53:55 2011 -0400
+  
+    rework how we figure out urls; add user/repo args
+
+  commit b66a1c9b8416815ccce7ea14b5cfdffac0b2f16c
+  Author: Ricardo Signes <rjbs@cpan.org>
+  Date:   Mon May 2 17:46:58 2011 -0400
+  
+    allow checking multiple remotes; use smart urls
+
+  commit c5641f0a7a8a7a446b2b97b8de9eec70ed912f5a
+  Author: Ricardo Signes <rjbs@cpan.org>
+  Date:   Mon May 2 17:46:12 2011 -0400
+  
+    clean up unneded symbols with namespace::autoclean
+
+  commit 165196049f7aff5a953dea0ec6cc74de21b42001
+  Author: Ricardo Signes <rjbs@cpan.org>
+  Date:   Mon May 2 22:57:38 2011 -0400
+  
+    keep git status clean with a .gitignore 
+
+==============================
 2010-06-19 19:55:32 +0100 0.10
 ==============================
 
@@ -44,6 +114,6 @@
   
     Added minimal perl version 
 
-===================================
-End of changes in the last 365 days
-===================================
+====================================
+End of changes in the last 1825 days
+====================================
