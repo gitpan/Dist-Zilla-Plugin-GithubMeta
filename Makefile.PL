@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.008005; }
+use 5.008005;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     'Moose' => '1.07',
     'MooseX::Types::URI' => '0.02'
   },
-  'VERSION' => '0.12',
+  'VERSION' => '0.14',
   'test' => {
     'TESTS' => 't/*.t'
   }

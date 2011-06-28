@@ -1,4 +1,14 @@
 ==============================
+2011-06-28 19:12:05 +0100 0.14
+==============================
+
+  commit 22f613bacc1aac2a8a0b6853b9b7f64764ae5b8c
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue Jun 28 19:12:05 2011 +0100
+  
+    Skip the basic tests if 'git' is not installed. 
+
+==============================
 2011-05-03 12:23:18 +0100 0.12
 ==============================
 
