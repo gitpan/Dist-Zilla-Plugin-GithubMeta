@@ -22,5 +22,5 @@ requires:
   perl: 5.008005
 resources:
   homepage: https://github.com/bingos/dist-zilla-plugin-githubmeta
-  repository: https://github.com/bingos/dist-zilla-plugin-githubmeta
-version: 0.18
+  repository: https://github.com/bingos/dist-zilla-plugin-githubmeta.git
+version: 0.20

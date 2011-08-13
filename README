@@ -3,7 +3,7 @@ NAME
     information in META.yml
 
 VERSION
-    version 0.18
+    version 0.20
 
 SYNOPSIS
       # in dist.ini

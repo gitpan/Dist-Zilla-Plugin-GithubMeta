@@ -1,4 +1,15 @@
 ==============================
+2011-08-13 13:50:03 +0100 0.20
+==============================
+
+  commit 3a080347f8fdb4b57f3dd57f664270aa6e86c997
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Sat Aug 13 13:50:03 2011 +0100
+  
+    Bump to version 0.20, remember to build the release with -Ilib this
+    time 
+
+==============================
 2011-08-13 13:45:42 +0100 0.18
 ==============================
 

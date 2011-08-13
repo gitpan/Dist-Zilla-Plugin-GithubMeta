@@ -36,10 +36,10 @@
       "homepage" : "https://github.com/bingos/dist-zilla-plugin-githubmeta",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/bingos/dist-zilla-plugin-githubmeta",
+         "url" : "https://github.com/bingos/dist-zilla-plugin-githubmeta.git",
          "web" : "https://github.com/bingos/dist-zilla-plugin-githubmeta"
       }
    },
-   "version" : "0.18"
+   "version" : "0.20"
 }
 
