@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::GithubMeta;
 {
-  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.20';
+  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.22';
 }
 
 # ABSTRACT: Automatically include GitHub meta information in META.yml
@@ -57,9 +57,24 @@ sub _acquire_repo_info {
   return unless can_run('git');
 
   my $git_url;
-  for my $remote (@{ $self->remote }) {
-    next unless $git_url = $self->_url_for_remote($remote);
-    last if $git_url =~ m!\bgithub\.com[:/]!; # Not a Github repository
+  remotelist: for my $remote (@{ $self->remote }) {
+    # Missing remotes expand to the same value as they were input
+    # ( git version 1.7.7 -- kentnl -- 2011-10-08 )
+    unless ( $git_url = $self->_url_for_remote($remote) and $remote ne $git_url ) {
+      $self->log(
+        ['A remote named \'%s\' was specified, but does not appear to exist.', $remote ]
+      );
+      undef $git_url;
+      next remotelist;
+    }
+    last if $git_url =~ m!\bgithub\.com[:/]!; # Short Circuit on Github repository
+
+    # Not a Github Repository?
+    $self->log( [
+        'Specified remote \'%s\' expanded to \'%s\', which is not a github repository URL',
+        $remote, $git_url,
+    ] );
+
     undef $git_url;
   }
 
@@ -72,6 +87,9 @@ sub _acquire_repo_info {
     $
   }ix;
 
+  $self->log(['No user could be discerned from URL: \'%s\'', $git_url ]) unless defined $user ;
+  $self->log(['No repository could be discerned from URL: \'%s\'', $git_url ]) unless defined $repo;
+
   return unless defined $user and defined $repo;
 
   $self->user($user) unless $self->_has_user;
@@ -83,7 +101,10 @@ sub metadata {
 
   $self->_acquire_repo_info;
 
-  return unless $self->_has_user and $self->_has_repo;
+  unless ( $self->_has_user and $self->_has_repo ){
+    $self->log(['skipping meta.resources.repository creation'] );
+    return;
+  }
 
   my $gh_url  = sprintf 'https://github.com/%s/%s', $self->user, $self->repo;
   my $bug_url = "$gh_url/issues";
@@ -145,7 +166,7 @@ Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta information 
 
 =head1 VERSION
 
-version 0.20
+version 0.22
 
 =head1 SYNOPSIS
 

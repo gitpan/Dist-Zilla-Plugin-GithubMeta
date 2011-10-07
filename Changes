@@ -1,4 +1,68 @@
 ==============================
+2011-10-07 21:35:38 +0100 0.22
+==============================
+
+  commit 59df70866c19c4262fa8d72befb0061be270d04f
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Fri Oct 7 21:35:38 2011 +0100
+  
+    Bump to version 0.22
+
+  commit a6a33014c1a4bea5159fe8a305298512d828b784
+  Author: Kent Fredric <kentfredric@gmail.com>
+  Date:   Fri Oct 7 22:47:24 2011 +0800
+  
+    Warn when a remote is specified, but is not found.
+
+    This scenario can cause some rather nasty problems, and have some
+    hidden side effects, especially if the user has other plugins that
+    are relying on GithubMeta to populate the metadata-stash , but it
+    silently does not.
+
+    Instead of just silently trucking along and failing to populate
+    metadata, it now does:
+
+    [@Filter/GithubMeta] A remote named 'github' was specified, but does
+    not appear to exist.
+
+    [@Filter/GithubMeta] skipping meta.resources.repository creation
+
+    Which will be a bit more helpful if something goes wrong because of
+    this. ( And its incredibly likely that remote names for new clones
+    wont match the remote names used somewhere else )
+
+    Have to add an explict `undef` before `next` too.
+
+    Otherwise, for the last item that fails, "next" jumps past the undef,
+
+    causing the code to try parsing a user and repo out of the whatever
+
+    the result of the last call to `_url_for_remote` returned.
+
+    And this could be either nothing, complete garbage, or the remote
+    name itself, ( the remote name itself appears in the output of `git
+    remote
+
+    show -n foobar` when that remote doesn't even exist:
+
+    > git remote show -n foobar
+
+    * remote foobar
+
+    Fetch URL: foobar
+
+    Push URL: foobar
+
+    HEAD branch: (not queried)
+
+    Local ref configured for 'git push' (status not queried):
+
+    (matching) pushes to (matching)
+
+    This is unessecary effort, and makes further error
+    reporting/diagnostics needlessly noisy. 
+
+==============================
 2011-08-13 13:50:03 +0100 0.20
 ==============================
 
