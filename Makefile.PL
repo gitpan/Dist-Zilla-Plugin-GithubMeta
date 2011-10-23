@@ -22,11 +22,11 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Dist::Zilla" => "4.101582",
     "Dist::Zilla::Role::MetaProvider" => "4.101582",
-    "IPC::Cmd" => "0.58",
+    "IPC::Cmd" => 0,
     "Moose" => "1.07",
     "MooseX::Types::URI" => "0.02"
   },
-  "VERSION" => "0.22",
+  "VERSION" => "0.24",
   "test" => {
     "TESTS" => "t/*.t"
   }

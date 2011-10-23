@@ -16,11 +16,11 @@ name: Dist-Zilla-Plugin-GithubMeta
 requires:
   Dist::Zilla: 4.101582
   Dist::Zilla::Role::MetaProvider: 4.101582
-  IPC::Cmd: 0.58
+  IPC::Cmd: 0
   Moose: 1.07
   MooseX::Types::URI: 0.02
   perl: 5.008005
 resources:
   homepage: https://github.com/bingos/dist-zilla-plugin-githubmeta
   repository: https://github.com/bingos/dist-zilla-plugin-githubmeta.git
-version: 0.22
+version: 0.24
