@@ -3,7 +3,7 @@ NAME
     information in META.yml
 
 VERSION
-    version 0.28
+    version 0.30
 
 SYNOPSIS
       # in dist.ini
@@ -69,7 +69,7 @@ AUTHORS
     *   Ricardo SIGNES <rjbs@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2011 by Chris Williams, Tatsuhiko
+    This software is copyright (c) 2013 by Chris Williams, Tatsuhiko
     Miyagawa and Ricardo SIGNES.
 
     This is free software; you can redistribute it and/or modify it under

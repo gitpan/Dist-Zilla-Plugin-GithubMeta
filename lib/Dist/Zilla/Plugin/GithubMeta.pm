@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::GithubMeta;
 {
-  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.28';
+  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.30';
 }
 
 # ABSTRACT: Automatically include GitHub meta information in META.yml
@@ -12,7 +12,6 @@ with 'Dist::Zilla::Role::MetaProvider';
 
 use MooseX::Types::URI qw[Uri];
 use Cwd;
-use IPC::Cmd qw[can_run];
 
 use namespace::autoclean;
 
@@ -54,7 +53,9 @@ sub _acquire_repo_info {
   return if $self->_has_user and $self->_has_repo;
 
   return unless _under_git();
-  return unless can_run('git');
+
+  require IPC::Cmd;
+  return unless IPC::Cmd::can_run('git');
 
   my $git_url;
   remotelist: for my $remote (@{ $self->remote }) {
@@ -156,8 +157,8 @@ no Moose;
 
 qq[1 is the loneliest number];
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -166,7 +167,7 @@ Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta information 
 
 =head1 VERSION
 
-version 0.28
+version 0.30
 
 =head1 SYNOPSIS
 
@@ -261,10 +262,9 @@ Ricardo SIGNES <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Chris Williams, Tatsuhiko Miyagawa and Ricardo SIGNES.
+This software is copyright (c) 2013 by Chris Williams, Tatsuhiko Miyagawa and Ricardo SIGNES.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
