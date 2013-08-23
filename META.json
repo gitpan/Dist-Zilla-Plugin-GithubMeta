@@ -5,7 +5,7 @@
       "Ricardo SIGNES <rjbs@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.132140",
    "license" : [
       "perl_5"
    ],
@@ -36,6 +36,13 @@
             "MooseX::Types::URI" : "0.03",
             "perl" : "5.008005"
          }
+      },
+      "test" : {
+         "requires" : {
+            "Capture::Tiny" : "0",
+            "Test::More" : "0.88",
+            "blib" : "0"
+         }
       }
    },
    "release_status" : "stable",
@@ -47,6 +54,6 @@
          "web" : "https://github.com/bingos/dist-zilla-plugin-githubmeta"
       }
    },
-   "version" : "0.30"
+   "version" : "0.32"
 }
 
