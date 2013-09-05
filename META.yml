@@ -26,4 +26,4 @@ requires:
 resources:
   homepage: https://github.com/bingos/dist-zilla-plugin-githubmeta
   repository: https://github.com/bingos/dist-zilla-plugin-githubmeta.git
-version: 0.34
+version: 0.36
