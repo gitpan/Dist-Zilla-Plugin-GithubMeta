@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::GithubMeta;
 {
-  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.36';
+  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.38';
 }
 
 # ABSTRACT: Automatically include GitHub meta information in META.yml
@@ -128,10 +128,15 @@ sub metadata {
 
 sub _url_for_remote {
   my ($self, $remote) = @_;
-  my $url = `git config --get remote.$remote.url`;
-  chomp $url;
-
-  return $url;
+  local $ENV{LANG}='C';
+  my @remote_info = `git remote show -n $remote`;
+  for my $line (@remote_info) {
+    chomp $line;
+    if ($line =~ /^\s*Fetch URL:\s*(.*)/) {
+      return $1;
+    }
+  }
+  return;
 }
 
 sub _under_git {
@@ -168,7 +173,7 @@ Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta information 
 
 =head1 VERSION
 
-version 0.36
+version 0.38
 
 =head1 SYNOPSIS
 

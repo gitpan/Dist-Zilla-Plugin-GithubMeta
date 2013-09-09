@@ -1,6 +1,47 @@
 ==================================================
-Changes from 2008-09-06 00:00:00 +0000 to present.
+Changes from 2008-09-10 00:00:00 +0000 to present.
 ==================================================
+
+-----------------------------------------
+version 0.38 at 2013-09-09 08:53:35 +0000
+-----------------------------------------
+
+  Change: bb85bd8d712ff12b2fd2bea2a8495f279099fc9b
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date : 2013-09-09 09:53:35 +0000
+
+    Change LANG env var to 'C' before calling 'git'
+
+    The plugin fails if locale is set for instance to LANG=de_DE.UTF-8,
+    so git output is German:
+
+    > LANG=de_DE.UTF-8 git remote show -n origin * externes Projektarchiv
+    origin
+
+    URL zum Abholen: ...
+
+    URL zum Versenden: ...
+
+    Reported by Jakob Voss 
+
+  Change: 5a14672775dcf0379138fafc090101655742982d
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date : 2013-09-09 01:47:54 +0000
+
+    Merge pull request #6 from haarg/remote-not-config
+
+    use git remote command to fetch remote urls 
+
+  Change: 6be9e72b39608d991438052f38ff1e4146e897b8
+  Author: Graham Knop <haarg@haarg.org>
+  Date : 2013-09-09 01:37:27 +0000
+
+    use git remote command to fetch remote urls
+
+    If the git url.<base>.insteadOf or url.<base>.pushInsteadOf options
+    are used, the URL listed in the config directly may not be the real
+    URL used for fetching. The remote command will resolve the real URLs
+    git will be using, so use that instead. 
 
 -----------------------------------------
 version 0.36 at 2013-09-05 12:14:13 +0000
