@@ -27,11 +27,12 @@ my %WriteMakefileArgs = (
     "MooseX::Types::URI" => "0.03"
   },
   "TEST_REQUIRES" => {
+    "File::Spec" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.38",
+  "VERSION" => "0.40",
   "test" => {
     "TESTS" => "t/*.t"
   }
