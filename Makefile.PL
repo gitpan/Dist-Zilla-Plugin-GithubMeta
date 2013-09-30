@@ -24,7 +24,8 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Role::MetaProvider" => "4.101582",
     "IPC::Cmd" => 0,
     "Moose" => "1.07",
-    "MooseX::Types::URI" => "0.03"
+    "MooseX::Types::URI" => "0.03",
+    "version" => 0
   },
   "TEST_REQUIRES" => {
     "File::Spec" => 0,
@@ -32,7 +33,7 @@ my %WriteMakefileArgs = (
     "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.40",
+  "VERSION" => "0.42",
   "test" => {
     "TESTS" => "t/*.t"
   }

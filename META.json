@@ -34,7 +34,8 @@
             "IPC::Cmd" : "0",
             "Moose" : "1.07",
             "MooseX::Types::URI" : "0.03",
-            "perl" : "5.008005"
+            "perl" : "5.008005",
+            "version" : "0"
          }
       },
       "test" : {
@@ -55,6 +56,6 @@
          "web" : "https://github.com/bingos/dist-zilla-plugin-githubmeta"
       }
    },
-   "version" : "0.40"
+   "version" : "0.42"
 }
 

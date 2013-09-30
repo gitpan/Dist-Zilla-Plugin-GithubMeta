@@ -1,6 +1,20 @@
 ==================================================
-Changes from 2008-09-28 00:00:00 +0000 to present.
+Changes from 2008-10-01 00:00:00 +0000 to present.
 ==================================================
+
+-----------------------------------------
+version 0.42 at 2013-09-30 11:03:50 +0000
+-----------------------------------------
+
+  Change: 6c90717d27f8938ac462040b97ebec25b420bd31
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date : 2013-09-30 12:03:50 +0000
+
+    Work around ancient git versions
+
+    git remote wasn't available until 1.5.0
+
+    The output from git remote changed sometime after 1.6.x 
 
 -----------------------------------------
 version 0.40 at 2013-09-27 18:04:49 +0000

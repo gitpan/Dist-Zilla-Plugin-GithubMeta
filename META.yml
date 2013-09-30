@@ -24,7 +24,8 @@ requires:
   Moose: 1.07
   MooseX::Types::URI: 0.03
   perl: 5.008005
+  version: 0
 resources:
   homepage: https://github.com/bingos/dist-zilla-plugin-githubmeta
   repository: https://github.com/bingos/dist-zilla-plugin-githubmeta.git
-version: 0.40
+version: 0.42

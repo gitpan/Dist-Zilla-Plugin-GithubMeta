@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::GithubMeta;
 {
-  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.40';
+  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.42';
 }
 
 # ABSTRACT: Automatically include GitHub meta information in META.yml
@@ -56,6 +56,17 @@ sub _acquire_repo_info {
 
   require IPC::Cmd;
   return unless IPC::Cmd::can_run('git');
+
+  {
+    my $gitver = `git version`;
+    my ($ver) = $gitver =~ m!git version ([0-9.]+)!;
+    chomp $gitver;
+    require version;
+    if ( version->parse( $ver ) < version->parse('1.5.0') ) {
+      warn "$gitver is too low, 1.5.0 or above is required\n";
+      return;
+    }
+  }
 
   my $git_url;
   remotelist: for my $remote (@{ $self->remote }) {
@@ -132,7 +143,7 @@ sub _url_for_remote {
   my @remote_info = `git remote show -n $remote`;
   for my $line (@remote_info) {
     chomp $line;
-    if ($line =~ /^\s*Fetch URL:\s*(.*)/) {
+    if ($line =~ /^\s*(?:Fetch)?\s*URL:\s*(.*)/) {
       return $1;
     }
   }
@@ -173,7 +184,7 @@ Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta information 
 
 =head1 VERSION
 
-version 0.40
+version 0.42
 
 =head1 SYNOPSIS
 
