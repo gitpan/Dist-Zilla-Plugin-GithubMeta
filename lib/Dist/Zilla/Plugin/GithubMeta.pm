@@ -1,8 +1,5 @@
 package Dist::Zilla::Plugin::GithubMeta;
-{
-  $Dist::Zilla::Plugin::GithubMeta::VERSION = '0.42';
-}
-
+$Dist::Zilla::Plugin::GithubMeta::VERSION = '0.44';
 # ABSTRACT: Automatically include GitHub meta information in META.yml
 
 use strict;
@@ -178,13 +175,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::Plugin::GithubMeta - Automatically include GitHub meta information in META.yml
 
 =head1 VERSION
 
-version 0.42
+version 0.44
 
 =head1 SYNOPSIS
 
@@ -219,7 +218,7 @@ L<Module::Install::Repository> by Tatsuhiko Miyagawa
 
 =item C<remote>
 
-The GitHub remote repo can be overriden with this attribute. If not
+The GitHub remote repo can be overridden with this attribute. If not
 provided, it defaults to C<origin>.  You can provide multiple remotes to
 inspect.  The first one that looks like a GitHub remote is used.
 
@@ -279,7 +278,7 @@ Ricardo SIGNES <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Chris Williams, Tatsuhiko Miyagawa and Ricardo SIGNES.
+This software is copyright (c) 2014 by Chris Williams, Tatsuhiko Miyagawa and Ricardo SIGNES.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

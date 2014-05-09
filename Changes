@@ -1,6 +1,30 @@
 ==================================================
-Changes from 2008-10-01 00:00:00 +0000 to present.
+Changes from 2009-05-10 00:00:00 +0000 to present.
 ==================================================
+
+-----------------------------------------
+version 0.44 at 2014-05-09 17:46:15 +0000
+-----------------------------------------
+
+  Change: e705f5151f7a44479b09dc05c07ad28011b72518
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date : 2014-05-09 18:46:15 +0000
+
+    Release engineering for 0.44 
+
+  Change: 5ac089e9d43e366621507f6ac9ded5b241535281
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date : 2014-05-09 18:42:34 +0000
+
+    Merge pull request #7 from dsteinbrunner/patch-1
+
+    typo fix 
+
+  Change: 97bcc799c9b52cfc22158bf7741cfa1af7e9af1c
+  Author: David Steinbrunner <dsteinbrunner@pobox.com>
+  Date : 2014-03-23 17:24:32 +0000
+
+    typo fix 
 
 -----------------------------------------
 version 0.42 at 2013-09-30 11:03:50 +0000
@@ -106,13 +130,13 @@ version 0.32 at 2013-08-23 20:44:13 +0000
     Optimize _url_for_remote 
 
   Change: 5d555a1a0fb6b8a514e524b87889b90bfee2c851
-  Author: Olivier Mengué <dolmen@cpan.org>
+  Author: Olivier MenguÃ© <dolmen@cpan.org>
   Date : 2013-07-18 00:32:46 +0000
 
     Optimize _url_for_remote: use git plumbing command 
 
   Change: 964ed6b1cdf759c98d3d6f22cb2e022c83d8273f
-  Author: Olivier Mengué <dolmen@cpan.org>
+  Author: Olivier MenguÃ© <dolmen@cpan.org>
   Date : 2013-07-18 00:32:45 +0000
 
     Use [Bootstrap::lib]
@@ -138,7 +162,7 @@ version 0.30 at 2013-07-17 22:50:24 +0000
     Lazy load IPC::Cmd 
 
   Change: 96bfad240045ff88e9b79e6233cdda1c418b8b4f
-  Author: Olivier Mengué <dolmen@cpan.org>
+  Author: Olivier MenguÃ© <dolmen@cpan.org>
   Date : 2013-07-17 23:47:30 +0000
 
     Lazy load IPC::Cmd 
@@ -259,13 +283,13 @@ version 0.18 at 2011-08-13 12:45:42 +0000
     Bumped version to 0.18 
 
   Change: 8ca18e5a9de4c694b00c534a9b08c60c4440dbf2
-  Author: Olivier Mengué <dolmen@cpan.org>
+  Author: Olivier MenguÃ© <dolmen@cpan.org>
   Date : 2011-08-13 20:40:40 +0000
 
     .gitignore: Dist-Zilla-... 
 
   Change: f5a1a81428622523623a0aaea782d1a44e468ef9
-  Author: Olivier Mengué <dolmen@cpan.org>
+  Author: Olivier MenguÃ© <dolmen@cpan.org>
   Date : 2011-08-13 20:40:39 +0000
 
     Add ".git" to repo URL 
@@ -280,7 +304,7 @@ version 0.16 at 2011-07-14 22:13:06 +0000
 
     Resolve [rt.cpan.org #69412] "Github URLs are now https"
 
-    Reported by Olivier 'dolmen' Mengué 
+    Reported by Olivier 'dolmen' MenguÃ© 
 
 -----------------------------------------
 version 0.14 at 2011-06-28 18:12:05 +0000
