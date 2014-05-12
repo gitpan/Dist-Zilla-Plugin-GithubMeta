@@ -28,4 +28,4 @@ requires:
 resources:
   homepage: https://github.com/bingos/dist-zilla-plugin-githubmeta
   repository: https://github.com/bingos/dist-zilla-plugin-githubmeta.git
-version: '0.44'
+version: '0.46'
